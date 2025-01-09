@@ -10,7 +10,13 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Placeholder(fallbackHeight: 200, fallbackWidth: 200),
+            // Gambar pada halaman welcome
+            Image.asset(
+              'assets/images/welcome_image.jpeg', // Ganti dengan path gambar Anda
+              height: 200, // Ukuran gambar
+              width: 200, // Ukuran gambar
+              fit: BoxFit.cover, // Menyesuaikan gambar dengan ukuran
+            ),
             SizedBox(height: 20),
             Text(
               'Welcome to Our App',

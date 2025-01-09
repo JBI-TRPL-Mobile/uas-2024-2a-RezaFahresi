@@ -18,6 +18,15 @@ class HomePage extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
         iconTheme: IconThemeData(color: Colors.black),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.message),
+            onPressed: () {
+              // Navigasi ke halaman MessagesScreen
+              Navigator.pushNamed(context, '/messages');
+            },
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
