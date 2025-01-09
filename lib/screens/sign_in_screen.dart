@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'sign_up_screen.dart';
+import 'home_page.dart'; //
 
 class SignInScreen extends StatelessWidget {
   @override
@@ -35,12 +36,19 @@ class SignInScreen extends StatelessWidget {
                 foregroundColor: Colors.white,
               ),
               onPressed: () {
-                // Logika Sign In
+                // Navigasi ke HomePage setelah Sign In
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
               },
               child: Text('Sign In'),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                // Logika untuk lupa password
+                // Tambahkan navigasi ke halaman lupa password jika diperlukan
+              },
               child: Text(
                 'Forgot Password?',
                 style: TextStyle(color: Colors.blue),
