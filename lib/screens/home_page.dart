@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/profile_screen.dart'; // Import file profile_screen
 import '../widgets/app_bottom_navigation.dart';
 import '../widgets/category_chip.dart';
 import '../widgets/top_courses_grid.dart';
@@ -19,6 +20,17 @@ class HomePage extends StatelessWidget {
         ),
         iconTheme: IconThemeData(color: Colors.black),
         actions: [
+          // Tambahkan tombol profil pada AppBar
+          IconButton(
+            icon: Icon(Icons.account_circle),
+            onPressed: () {
+              // Menavigasi ke ProfileScreen saat tombol profil ditekan
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfileScreen()),
+              );
+            },
+          ),
           IconButton(
             icon: Icon(Icons.message),
             onPressed: () {
